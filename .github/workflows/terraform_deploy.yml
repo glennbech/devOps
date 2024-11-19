@@ -1,0 +1,42 @@
+name: Terraform Deploy
+
+on:
+  push:
+    branches:
+      - main  # Når det er en push til main-branchen, kjør terraform apply
+      - '**'  # Dette kan brukes til å kjøre terraform plan på alle andre branches
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: '1.9'  # Sørg for at du har riktig Terraform versjon (minst 1.9)
+          aws_provider_version: '5.74.0'  # Terraform AWS provider versjon
+
+      - name: AWS Credentials Setup
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: 'eu-west-1'  # Sett ønsket AWS-region
+
+      - name: Initialize Terraform
+        run: terraform init
+
+      - name: Terraform Plan
+        if: github.ref != 'refs/heads/main'  # Kjør terraform plan på alle branches som ikke er main
+        run: terraform plan
+
+      - name: Terraform Apply
+        if: github.ref == 'refs/heads/main'  # Kjør terraform apply kun på main-branchen
+        run: terraform apply -auto-approve
+
+      - name: Terraform Output
+        run: terraform output
