@@ -34,12 +34,11 @@ jobs:
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws configure set region eu-west-1
 
-      # Bygg SAM-applikasjonen
+      # Bygg SAM-applikasjonen (bruk riktig sti til template.yaml)
       - name: Build SAM application
-        run: sam build
+        run: sam build -t eksamen-2024/sam_lambda/generate-image-lambda/template.yaml  # Legg til riktig sti til template.yaml
 
       # Deploy SAM-applikasjonen
       - name: Deploy SAM application
         run: |
-          sam deploy --no-confirm-changeset --stack-name genIm --capabilities CAPABILITY_IAM
-
+          sam deploy -t eksamen-2024/sam_lambda/generate-image-lambda/template.yaml --no-confirm-changeset --stack-name genIm --capabilities CAPABILITY_IAM
