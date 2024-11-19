@@ -1,0 +1,5 @@
+# Ignore Terraform provider binaries
+**/.terraform/
+**/.terraform.lock.hcl
+**/.terraform/providers/
+**/*.exe
