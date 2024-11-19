@@ -26,7 +26,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y python3-pip python3-dev build-essential
           pip3 install aws-sam-cli
-          pip3 install -r requirements.txt
 
       # Konfigurer AWS CLI med credentials fra GitHub Secrets
       - name: Set up AWS CLI
