@@ -1,1 +1,46 @@
-test
+name: Deploy SAM Application
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Sjekk ut koden fra repositoryet
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Sett opp Python 3.13 for SAM CLI
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.13
+
+      # Installer SAM CLI og nødvendige avhengigheter
+      - name: Install SAM CLI and dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-pip python3-dev build-essential
+          pip3 install aws-sam-cli
+          pip3 install -r requirements.txt
+
+      # Konfigurer AWS CLI med credentials fra GitHub Secrets
+      - name: Set up AWS CLI
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws configure set region eu-west-1
+
+      # Bygg SAM-applikasjonen
+      - name: Build SAM application
+        run: sam build
+
+      # Deploy SAM-applikasjonen
+      - name: Deploy SAM application
+        run: |
+          sam deploy --no-confirm-changeset --stack-name genIm --capabilities CAPABILITY_IAM
+
