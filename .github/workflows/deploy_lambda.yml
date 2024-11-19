@@ -33,12 +33,16 @@ jobs:
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws configure set region eu-west-1
+          
+      # Debugging - Sjekk arbeidskatalogen for å bekrefte stien
+      - name: Check working directory
+        run: pwd
 
       # Bygg SAM-applikasjonen (bruk riktig sti til template.yaml)
       - name: Build SAM application
-        run: sam build -t ../../sam_lambda/generate-image-lambda/template.yaml
+        run: sam build -t sam_lambda/generate-image-lambda/template.yaml  # Absolutt sti fra rot
 
       # Deploy SAM-applikasjonen
       - name: Deploy SAM application
         run: |
-          sam deploy -t ../../sam_lambda/generate-image-lambda/template.yaml --no-confirm-changeset --stack-name genIm --capabilities CAPABILITY_IAM
+          sam deploy -t sam_lambda/generate-image-lambda/template.yaml --no-confirm-changeset --stack-name genIm --capabilities CAPABILITY_IAM
