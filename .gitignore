@@ -3,3 +3,17 @@
 **/.terraform.lock.hcl
 **/.terraform/providers/
 **/*.exe
+
+# Ignore Maven build artifacts
+**/target/
+**/*.class
+**/*.jar
+
+# Ignore Docker-related files
+**/.docker/
+
+# Ignore IDE and OS-specific files (if relevant)
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
