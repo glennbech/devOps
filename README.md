@@ -22,8 +22,23 @@ https://sqs.eu-west-1.amazonaws.com/160885256027/image-processing-queue
 
 
 Oppgave 3
-a)
-b)
+a) Koden finnes i filen "Dockerfile" i mapppen java_sqs_client
+b) Hvordan jeg har valgt å tagge container imagene mine og hvorfor:
+1. Latest Tag  
+        Latest tagggen representerer den nyeste versjonen av docker
+        imaget. Når en ny commit blir pusha, bllir imaget bygget og
+        tagget med main. Da blir det enkelt for teamet å alltid få
+        tilggang til den siste stabile versjonen av imaget.
+2. <commit-sha> tag:
+        Hver gang jeg commiter blir en unik sha-hash generert, så jeg
+        valgte å bruke denne hashen som en tag for docker imaget. Da
+        blir det mulig å identifisere og referere til eksakte versjoner
+        av imaget knyttet till spesifikke commits. Dette hjelper når det
+        gjelder feilsøking ogg presis versjonskontroll.
+
+Docker image:
+waaro/java-sqs-client
+(AWS access og secret keys liggger fremdeles tilgjengelig i .txt filen)
 
 
 
