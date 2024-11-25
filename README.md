@@ -62,3 +62,25 @@ når kravene er oppfylt.
 ---
 
 Oppgave 5
+
+a)
+
+Automatisering og kontinuerlig levering (CI/CD)
+
+---
+
+b)
+
+Observability (overvåkning)
+
+---
+
+c)
+
+Skalerbarhet og kostnadskontroll
+
+---
+
+d)
+
+Eierskap og ansvar

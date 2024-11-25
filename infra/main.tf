@@ -39,6 +39,7 @@ resource "aws_lambda_function" "image_processor" {
   environment {
     variables = {
       SQS_QUEUE_URL = aws_sqs_queue.image_queue.url
+      BUCKET_NAME = "pgr301-couch-explorers-kandidat42"
     }
   }
 
