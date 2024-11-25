@@ -122,12 +122,12 @@ Rask deployment og god skalerbarhet eller mer kontroll og tilpassning vil være 
 
 ---
 
-Oppsummeringstabell for leveranser
+## Oppsummeringstabell for leveranser
 | oppgave | lenke |
 | --- | --- |
 | 1a | https://n60393cta5.execute-api.eu-west-1.amazonaws.com/Prod/generate-image |
 | 1b | https://github.com/henaaro/devops/actions/runs/11910430238 |
-| 2a | [Oppgave 2]#oppgave-2 |
+| 2a | - [Oppgave 2]#oppgave-2 |
 | 2b | Actions workflow: https://github.com/henaaro/devops/actions/runs/11914158217 GitHub Actions workflow (ikke main): https://github.com/henaaro/devops/actions/runs/11920602646 SQS-Kø URL: https://sqs.eu-west-1.amazonaws.com/160885256027/image-processing-queue |
 | 3 | waaro/java-sqs-client |
 | 4 | Oppgave 4 |
