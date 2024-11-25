@@ -1,4 +1,6 @@
-Oppgave 1
+# PGR301 DevOps i Skyen - Kandidat 42
+
+## Oppgave 1
 
 a) HTTP Endepunkt for lambdafunksjon som kan testes med Postman:
 
@@ -12,7 +14,7 @@ https://github.com/henaaro/devops/actions/runs/11910430238
 
 ---
 
-Oppgave 2
+## Oppgave 2
 
 a) Kode finnes i mappen "infra", i main.tf
 b) Lenke til kjørt Actions workflow:
@@ -26,7 +28,7 @@ https://sqs.eu-west-1.amazonaws.com/160885256027/image-processing-queue
 
 ---
 
-Oppgave 3
+## Oppgave 3
 a) Koden finnes i filen "Dockerfile" i mappen java_sqs_client
 b) Hvordan jeg har valgt å tagge container imagene mine og hvorfor:
 1. Latest Tag  
@@ -49,7 +51,7 @@ waaro/java-sqs-client
 
 ---
 
-Oppgave 4
+## Oppgave 4
 
 ![img.png](img.png)
 Har lagt til min egen mail her, så vet ikke helt hvordan det vil være for sensor
@@ -62,7 +64,7 @@ når kravene er oppfylt.
 
 ---
 
-Oppgave 5
+## Oppgave 5
 
 **Serverless arkitektur vs Mikrotjenestebasert arkitektur**
 
@@ -125,5 +127,8 @@ Oppsummeringstabell for leveranser
 | --- | --- |
 | 1a | https://n60393cta5.execute-api.eu-west-1.amazonaws.com/Prod/generate-image |
 | 1b | https://github.com/henaaro/devops/actions/runs/11910430238 |
+| 2a | [Oppgave 2]#oppgave-2 |
 | 2b | Actions workflow: https://github.com/henaaro/devops/actions/runs/11914158217 GitHub Actions workflow (ikke main): https://github.com/henaaro/devops/actions/runs/11920602646 SQS-Kø URL: https://sqs.eu-west-1.amazonaws.com/160885256027/image-processing-queue |
 | 3 | waaro/java-sqs-client |
+| 4 | Oppgave 4 |
+| 5 | Oppgave 5 |
