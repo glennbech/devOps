@@ -68,7 +68,7 @@ Oppgave 5
 ---
 
 Oppsummeringstabell for leveranser
-| first | sec |
+| oppgave | lenke |
 | --- | --- |
 | 1a | https://n60393cta5.execute-api.eu-west-1.amazonaws.com/Prod/generate-image |
 | 1b | https://github.com/henaaro/devops/actions/runs/11910430238 |
