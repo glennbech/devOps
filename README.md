@@ -72,10 +72,5 @@ Oppsummeringstabell for leveranser
 | --- | --- |
 | 1a | https://n60393cta5.execute-api.eu-west-1.amazonaws.com/Prod/generate-image |
 | 1b | https://github.com/henaaro/devops/actions/runs/11910430238 |
-| 2b | Actions workflow:
-https://github.com/henaaro/devops/actions/runs/11914158217
-GitHub Actions workflow (ikke main):
-https://github.com/henaaro/devops/actions/runs/11920602646
-SQS-Kø URL:
-https://sqs.eu-west-1.amazonaws.com/160885256027/image-processing-queue |
+| 2b | Actions workflow: https://github.com/henaaro/devops/actions/runs/11914158217 GitHub Actions workflow (ikke main): https://github.com/henaaro/devops/actions/runs/11920602646 SQS-Kø URL: https://sqs.eu-west-1.amazonaws.com/160885256027/image-processing-queue |
 | 3 | waaro/java-sqs-client |
