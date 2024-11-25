@@ -6,8 +6,8 @@ a) HTTP Endepunkt for lambdafunksjon som kan testes med Postman:
 
 https://n60393cta5.execute-api.eu-west-1.amazonaws.com/Prod/generate-image
 
-(AWS access og secret keys ligger tilgjengelig i .pdf filen av sikkerhets-
-messige årsaker, vil ikke legge det til på GitHub hvor bots kan finne dem)
+(AWS access og secret keys ligger tilgjengelig i .pdf filen av sikkerhetsmessige
+årsaker, vil ikke legge det til på GitHub hvor bots kan finne dem)
 
 b) Lenke til kjørt GitHub Actions workflow (som har deployet SAM-applikasjone):
 https://github.com/henaaro/devops/actions/runs/11910430238
@@ -36,12 +36,12 @@ b) Hvordan jeg har valgt å tagge container imagene mine og hvorfor:
         imaget. Når en ny commit blir pusha, bllir imaget bygget og
         tagget med main. Da blir det enkelt for teamet å alltid få
         tilgang til den siste stabile versjonen av imaget.
-2. "<commit-sha>" tag:
+2. "commit-sha" tag:
         Hver gang jeg commiter blir en unik sha-hash generert, så jeg
         valgte å bruke denne hashen som en tag for docker imaget. Da
         blir det mulig å identifisere og referere til eksakte versjoner
-        av imaget knyttet till spesifikke commits. Dette hjelper når det
-        gjelder feilsøking ogg presis versjonskontroll.
+        av imaget knyttet til spesifikke commits. Dette hjelper når det
+        gjelder feilsøking og presis versjonskontroll.
 
 
 Docker image:
