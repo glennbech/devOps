@@ -34,7 +34,7 @@ b) Hvordan jeg har valgt å tagge container imagene mine og hvorfor:
         imaget. Når en ny commit blir pusha, bllir imaget bygget og
         tagget med main. Da blir det enkelt for teamet å alltid få
         tilggang til den siste stabile versjonen av imaget.
-2. <commit-sha> tag:
+2. "<commit-sha>" tag:
         Hver gang jeg commiter blir en unik sha-hash generert, så jeg
         valgte å bruke denne hashen som en tag for docker imaget. Da
         blir det mulig å identifisere og referere til eksakte versjoner
@@ -50,6 +50,14 @@ waaro/java-sqs-client
 ---
 
 Oppgave 4
+
+![img.png](img.png)
+Har lagt til min egen mail her, så vet ikke helt hvordan det vil være for sensor
+å sjekke at det funker, men koden ligger i:
+main.tf, variables.tf og terraform.tfvars
+Som en kan se på bildet over, og muligens på AWS panelet, kan man se at mailen sendes
+når kravene er oppfylt.
+
 
 ---
 

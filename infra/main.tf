@@ -43,6 +43,9 @@ resource "aws_lambda_function" "image_processor" {
   }
 
   role = aws_iam_role.lambda_exec_role.arn
+
+  memory_size = 128
+  timeout      = 30
 }
 
 # oppgave 4
