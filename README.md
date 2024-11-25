@@ -6,7 +6,7 @@ a) HTTP Endepunkt for lambdafunksjon som kan testes med Postman:
 
 https://n60393cta5.execute-api.eu-west-1.amazonaws.com/Prod/generate-image
 
-(AWS access og secret keys ligger tilgjengelig i .txt filen for sikkerhets-
+(AWS access og secret keys ligger tilgjengelig i .pdf filen av sikkerhets-
 messige årsaker, vil ikke legge det til på GitHub hvor bots kan finne dem)
 
 b) Lenke til kjørt GitHub Actions workflow (som har deployet SAM-applikasjone):
@@ -47,7 +47,7 @@ b) Hvordan jeg har valgt å tagge container imagene mine og hvorfor:
 Docker image:
 waaro/java-sqs-client
 
-(AWS access og secret keys ligger fremdeles tilgjengelig i .txt filen)
+(AWS access og secret keys ligger fremdeles tilgjengelig i .pdf filen)
 
 ---
 
